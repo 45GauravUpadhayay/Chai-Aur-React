@@ -6,19 +6,19 @@ const App = () => {
 
   let [Counter, setCounter] = useState(0);
 
-  // let Counter = 5;
-
   const addValue = () => {
-    console.log("Clicked", Counter);
+    if(Counter < 20){
     Counter = Counter + 1;
     setCounter(Counter)
-    console.log("Clicked", Counter);
+    }
   }
-
 
   const RemoveValue = () => {
-    setCounter(Counter - 1)
+    if(Counter > 0) setCounter(Counter - 1)
   }
+
+
+  console.log(Counter)
     
 
   return (
